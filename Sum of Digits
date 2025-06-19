@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum;
+
+    scanf("%d", &n);
+
+    if (n >= 10 && n <= 99) {
+        int digit1 = n / 10;
+        int digit2 = n % 10;
+        sum = digit1 + digit2;
+        printf("Sum of Digit %d is %03d\n", n, sum);
+    } else {
+        printf("Invalid Input\n");
+    }
+
+    return 0;
+}
