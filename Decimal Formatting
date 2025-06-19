@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float s;
+    scanf("%f",&s);
+    printf("%.5f \n%.4f \n%.3f \n%.2f \n%.1f \n",s,s,s,s,s);
+    int b=floor(s*100)/100;
+    printf("%d\n",b);   
+    return 0;
+}
