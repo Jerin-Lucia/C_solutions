@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char s[100];
+    int a,b;
+    scanf("%s\n",s);
+    scanf("%d\n%d\n",&a,&b);
+    printf("Name of the Student:%s\n",s);
+    if(((a==1) && (b>70)) || (((a==1)||(a==2)) && (b>75)))
+       {
+        printf("%s is Eligible for Placement",s);
+    }else{
+        printf("%s is Not Eligible for Placement",s);
+    }    
+    return 0;
+}
