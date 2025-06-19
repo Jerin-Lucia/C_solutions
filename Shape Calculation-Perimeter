@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a,l,b,r,b1,s1,b2;
+    scanf("%d\n%d\n%d\n%d\n%d\n%d\n%d\n",&a,&l,&b,&r,&b1,&s1,&b2);
+    printf("Perimeter of Square:%d\nPerimeter of Rectangle:%d\nPerimeter of Circle:%.2f\nPerimeter of Triangle:%d\n",4*a,2*(l+b),(float)2*3.141*r,b1+s1+b2); 
+    return 0;
+}
