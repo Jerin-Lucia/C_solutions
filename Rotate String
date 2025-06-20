@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+bool isRotated(char s[], char goal[]) {
+    int len1 = strlen(s);
+    int len2 = strlen(goal);
+
+    if (len1 != len2)
+        return false;
+
+    char temp[201];
+    strcpy(temp, s);
+    strcat(temp, s);
+
+
+    return strstr(temp, goal) != NULL;
+}
+
+int main() {
+    char s[101], goal[101];
+    scanf("%s", s);
+    scanf("%s", goal);
+
+    if (isRotated(s, goal)) {
+        printf("true\n");
+    } else {
+        printf("false\n");
+    }
+
+    return 0;
+}
