@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int count[256] = {0};  
+    scanf("%s", str);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        count[(int)str[i]]++;
+    }
+
+    int printed[256] = {0};
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (!printed[(int)str[i]]) {
+            printf("%c\t%d\n", str[i], count[(int)str[i]]);
+            printed[(int)str[i]] = 1;
+        }
+    }
+
+    return 0;
+}
