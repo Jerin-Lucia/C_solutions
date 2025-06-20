@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[101];
+    scanf("%s", s);
+
+    int len = strlen(s);
+    char x = s[0], y = '\0';
+    int valid = 1;
+
+    for (int i = 1; i < len; i++) {
+        if (s[i] != x) {
+            y = s[i];
+            break;
+        }
+    }
+
+    if (y == '\0') {
+        printf("No\n");
+        return 0;
+    }
+
+    for (int i = 0; i < len; i++) {
+        if (i % 2 == 0) {
+            if (s[i] != x && s[i] != y) {
+                valid = 0;
+                break;
+            }
+        } else {
+            if ((s[i] != x && s[i] != y) || s[i] == s[i - 1]) {
+                valid = 0;
+                break;
+            }
+        }
+    }
+    for (int i = 0; i < len; i++) {
+        if (s[i] != x && s[i] != y) {
+            valid = 0;
+            break;
+        }
+    }
+
+    if (valid)
+        printf("Yes\n");
+    else
+        printf("No\n");
+
+    return 0;
+}
