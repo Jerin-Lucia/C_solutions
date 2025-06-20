@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void printNatural(int n, int current) {
+    if (current > n)
+        return;
+    printf("%d ", current);
+    printNatural(n, current + 1);
+}
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+    if (num >= 1 && num <= 50) {
+        printf("The first %d Natural Numbers are:\n", num);
+        printNatural(num, 1);
+    } else {
+        printf("Enter a Valid Input!!!!!!!!!!!!!!!!!!!!!!!!\n");
+    }
+
+    return 0;
+}
